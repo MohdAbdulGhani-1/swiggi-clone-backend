@@ -33,7 +33,7 @@ app.get("/health", (req, res) => {
 
 app.get("/hotels", async (req, res) => {
     try {
-        const location = req.query.location || req.body.location || "charminar";
+        const location = "charminar";
         const data = await db.collection("hotelsList").findOne({ location: location });
         
         if (!data) {
