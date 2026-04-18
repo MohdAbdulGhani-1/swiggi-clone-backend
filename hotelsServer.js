@@ -44,7 +44,7 @@ app.get("/hotels", async (req, res) => {
             return res.status(404).json({ error: "Location not found" });
         }
         
-        res.json(data);
+        res.json(data.charminar);
     } catch (error) {
         console.error("Error fetching hotels:", error);
         res.status(500).json({ error: "Internal server error" });
